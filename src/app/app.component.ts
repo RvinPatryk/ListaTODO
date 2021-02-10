@@ -12,9 +12,8 @@ export class AppComponent {
   title: any;
   tasksDone: Array<string> = [];
 
-  add() {
-    this.tasksList.push(this.newTask);
-    this.newTask = '';
+  add(task: string) {
+    this.tasksList.push(task);
   }
 
   remove(task: string) {
