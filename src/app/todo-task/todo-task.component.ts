@@ -14,7 +14,8 @@ export class TodoTaskComponent implements OnInit {
   emitDone = new EventEmitter<string>();
   @Output()
   emitRemove = new EventEmitter<string>();
-
+  @Output ()
+  emitEdit = new EventEmitter<string>();
 
   constructor() { }
 
@@ -27,6 +28,9 @@ export class TodoTaskComponent implements OnInit {
 
   done(task: string){
     this.emitDone.emit(task);
+  }
+  edit(task: string){
+    this.emitEdit.emit(task);
   }
 
 }

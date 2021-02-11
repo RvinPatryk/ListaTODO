@@ -1,0 +1,11 @@
+ol {
+   background-color: lightgray; 
+   font-size: 18px;
+}
+li{
+    margin-block: 5px;
+}
+
+button{
+    float: right;
+}

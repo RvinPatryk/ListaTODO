@@ -1,6 +1,7 @@
 <p>Zadania wykonane: {{tasksDone.length}}</p>
-      <ul>
+      <ol>
         <li *ngFor="let task of tasksDone">
           {{task}}
+          <button (click)="remove(task)" class="btn btn-sm btn-danger">Usuń</button>
         </li>
-      </ul>
+      </ol>

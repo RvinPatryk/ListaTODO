@@ -11,6 +11,7 @@ export class AppComponent {
   tasksList: Array<string> = [];
   title: any;
   tasksDone: Array<string> = [];
+  editTask: any;
 
   add(task: string) {
     this.tasksList.push(task);
@@ -24,6 +25,8 @@ export class AppComponent {
     this.tasksDone.push(task);
     this.remove(task);
   }
-  
- 
+
+  removedone(task: string) {
+    this.tasksDone = this.tasksDone.filter(e => e !== task);
+  }
     }
