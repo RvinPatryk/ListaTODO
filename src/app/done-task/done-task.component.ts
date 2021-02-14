@@ -1,4 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Task } from '../model/task';
+import { TasksService } from '../services/tasks.service';
 
 @Component({
   selector: 'app-done-task',
@@ -7,18 +9,20 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class DoneTaskComponent implements OnInit {
 
-  @Input()
-  tasksDone: Array<string> = [];
-  @Output()
-  emitRemove = new EventEmitter<string>();
+  tasksDone: Array<Task> = [];
+  
 
-  constructor() { }
+  constructor(private tasksService: TasksService) { 
+    this.tasksService.getTasksDoneObs().subscribe((tasks: Array<Task>) =>{
+      this.tasksDone = tasks;
+    });
+  }
 
   ngOnInit(): void {
   }
 
-  remove(task: string){
-    this.emitRemove.emit(task);
+  removedone(task: Task){
+    this.tasksService.removedone(task);
   }
 
 }
