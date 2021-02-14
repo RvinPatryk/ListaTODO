@@ -2,9 +2,9 @@ button {
     float: right;
 }
 li {
-    margin-block: 5px;
+    margin-block: 4px;
 }
-ol {
+ul {
     background-color: lightgray; 
     font-size: 18px;
 }

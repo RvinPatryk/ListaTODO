@@ -1,0 +1,13 @@
+button {
+    float: right;
+}
+
+
+button:hover {
+    float: right;
+    background-color: gray;
+    color: honeydew;
+}
+input {
+    min-height: 30px;
+}

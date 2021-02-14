@@ -1,10 +1,10 @@
 <ng-container *ngIf="tasksList.length > 0; else noTasks">
 <p>Zadania do wykonania: {{tasksList.length}}</p>
     <ol>
-      <li *ngFor="let task of tasksList">
-        {{task.name}}
-        <button (click)="done(task)" class="btn btn-sm btn-success">Wykonane</button>
-        <button (click)="remove(task)" class="btn btn-sm btn-danger">Usuń</button>
+      <li appDate [date]="task.created" *ngFor="let task of tasksList">
+        {{task.name | taskTransform}}
+        <button class="done" (click)="done(task)" class="btn btn-sm btn-success">Wykonane</button>
+        <button class="remove" (click)="remove(task)" class="btn btn-sm btn-danger">Usuń</button>
       </li>
     </ol>
   </ng-container>

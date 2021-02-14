@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit,} from '@angular/core';
 import { Task } from '../model/task';
 import { TasksService } from '../services/tasks.service';
 
@@ -26,6 +26,7 @@ export class TodoTaskComponent implements OnInit {
   }
 
   done(task: Task){
+    task.end = new Date();
     this.tasksService.done(task);
   }
 
