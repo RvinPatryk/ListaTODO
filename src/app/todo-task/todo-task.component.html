@@ -5,6 +5,7 @@
         {{task.name | taskTransform}}
         <button class="done" (click)="done(task)" class="btn btn-sm btn-success">Wykonane</button>
         <button class="remove" (click)="remove(task)" class="btn btn-sm btn-danger">Usuń</button>
+        <button class="edit" (click)="edit(task)" class="btn btn-sm btn-primary">Edytuj</button>
       </li>
     </ol>
   </ng-container>

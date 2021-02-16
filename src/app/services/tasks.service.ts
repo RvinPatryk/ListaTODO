@@ -1,4 +1,4 @@
-import { Injectable } from "@angular/core";
+import { Injectable, Input } from "@angular/core";
 import { BehaviorSubject, Observable } from "rxjs";
 import { Task } from "../model/task";
 
@@ -7,8 +7,7 @@ export class TasksService {
 
     constructor() {
         this.tasksList = [
-          {name: "Test", created: new Date ()},
-          {name: "Test2", created: new Date ()}
+          
         ]
         this.tasksListObs.next(this.tasksList);
     }
@@ -47,6 +46,10 @@ export class TasksService {
 
     getTasksDoneObs(): Observable<Array<Task>>{
         return this.tasksDoneObs.asObservable();
+    }
+    
+    edit(task: Task) {
+      
     }
 
 }

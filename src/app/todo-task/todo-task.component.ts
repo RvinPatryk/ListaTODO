@@ -30,4 +30,7 @@ export class TodoTaskComponent implements OnInit {
     this.tasksService.done(task);
   }
 
+  edit(task: Task){
+    this.tasksService.edit(task);
+  }
 }
