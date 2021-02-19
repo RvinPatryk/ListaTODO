@@ -10,6 +10,8 @@ import { TasksService } from '../services/tasks.service';
 })
 export class TodoTaskComponent implements OnInit {
 
+  showMe:boolean=false;
+
   tasksList: Array<Task> = [];
 
   constructor(private tasksService: TasksService) { 
@@ -19,6 +21,10 @@ export class TodoTaskComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  toggleshow(){
+    this.showMe=!this.showMe;
   }
 
   remove(task: Task){

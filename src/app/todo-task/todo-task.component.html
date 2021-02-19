@@ -3,9 +3,10 @@
     <ol>
       <li appDate [date]="task.created" *ngFor="let task of tasksList">
         {{task.name | taskTransform}}
-        <button class="done" (click)="done(task)" class="btn btn-sm btn-success">Wykonane</button>
-        <button class="remove" (click)="remove(task)" class="btn btn-sm btn-danger">Usuń</button>
-        <button class="edit" (click)="edit(task)" class="btn btn-sm btn-primary">Edytuj</button>
+        <button class="cmore" class="btn btn-sm btn-light" (click)="toggleshow()">•••</button>
+        <button *ngIf="showMe" class="done" (click)="done(task)" class="btn btn-sm btn-success">Wykonane</button>
+        <button *ngIf="showMe" class="remove" (click)="remove(task)" class="btn btn-sm btn-danger">Usuń</button>
+        <button *ngIf="showMe" class="edit" (click)="edit(task)" class="btn btn-sm btn-primary">Edytuj</button>
       </li>
     </ol>
   </ng-container>

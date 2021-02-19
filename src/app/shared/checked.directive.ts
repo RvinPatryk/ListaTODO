@@ -10,7 +10,7 @@ export class CheckedDirective implements OnInit{
 
 
 }  ngOnInit(): void {
-    let li = this.el.nativeElement;
-    this.renderer.setStyle(li, 'list-style-image', 'url(/assets/check.png)');
+    let button = this.el.nativeElement;
+    this.renderer.setStyle(button, 'list-style-image', 'url(/assets/dots.png)');
   }
 }
