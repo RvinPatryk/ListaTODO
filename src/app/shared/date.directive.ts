@@ -25,6 +25,7 @@ export class DateDirective {
   @HostListener('mouseleave')
   mouseleave(eventDate: Event){
     this.renderer.removeChild(this.el.nativeElement, this.paragraph)
+    console.log(this.paragraph);
   }
 
 

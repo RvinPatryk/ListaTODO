@@ -10,4 +10,5 @@ button:hover {
 }
 input {
     min-height: 30px;
+    min-width: 300px;
 }

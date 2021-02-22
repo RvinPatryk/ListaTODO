@@ -1,4 +1,4 @@
 <div>
-    <input (keydown.enter)="add()" [(ngModel)]="newTask">
+    <input maxlength="30" (keydown.enter)="add()" [(ngModel)]="newTask">
     <button (click)="add()" class="btn btn-sm btn-default">Dodaj</button>
   </div>

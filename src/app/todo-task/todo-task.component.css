@@ -9,3 +9,7 @@ li{
 button{
     float: right;
 }
+
+p {
+    min-width: 220px;
+}

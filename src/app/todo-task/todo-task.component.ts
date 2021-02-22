@@ -2,7 +2,6 @@ import { Component, OnInit,} from '@angular/core';
 import { Task } from '../model/task';
 import { TasksService } from '../services/tasks.service';
 
-
 @Component({
   selector: 'app-todo-task',
   templateUrl: './todo-task.component.html',
@@ -39,4 +38,7 @@ export class TodoTaskComponent implements OnInit {
   edit(task: Task){
     this.tasksService.edit(task);
   }
+
+
 }
+
