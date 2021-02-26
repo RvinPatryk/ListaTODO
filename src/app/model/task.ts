@@ -1,7 +1,7 @@
 export interface Task {
     id: null;
     name: string;
-    created: Date;
-    end?: Date;
+    created: string;
+    end?: string;
     isDone: boolean;
 }

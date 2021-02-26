@@ -1,0 +1,43 @@
+<h1>DODAJ ZADANIA DO SWOJEJ LISTY</h1>
+<h1></h1>
+<h1></h1>
+<div id="content">
+<div id="content-wrap">
+<div class="container">
+  <div>
+    <input maxlength="30" (keydown.enter)="add()" [(ngModel)]="newTask">
+    <button (click)="add()" class="btn btn-sm btn-default">Dodaj</button>
+  </div>
+</div>
+
+<div class="container">
+<div>
+  <ng-container *ngIf="tasksList.length > 0; else noTasks">
+    <button class="btn btn-sm btn-light" title="Pokaż/schowaj opcje edycji" alt="Pokaż/schowaj opcje edycji"  (click)="toggleshow()">•••</button> 
+     <p>Zadania do wykonania: {{tasksList.length}}</p>
+      <ol>
+        <li *ngFor="let task of tasksList">
+          {{task.name | taskTransform}}
+          <button *ngIf="showMe" class="done" (click)="done(task)" class="btn btn-sm btn-success">Wykonane</button>
+          <button *ngIf="showMe" class="remove" (click)="remove(task)" class="btn btn-sm btn-danger">Usuń</button>
+          <button *ngIf="showMe" class="edit" (click)="edit(task)" class="btn btn-sm btn-primary">Edytuj</button>
+        </li>
+      </ol>
+    </ng-container>
+    <ng-template #noTasks>
+      <p>Brak zadań do wykonania</p>
+    </ng-template>
+    
+</div>
+
+<div>
+  <p>Zadania wykonane: {{tasksDone.length}}</p>
+      <ul>
+        <li appDate  *ngFor="let task of tasksDone">
+          {{task.name | taskTransform: ' - wykonane.'}}
+          <button (click)="removedone(task)" class="btn btn-sm btn-danger">Usuń</button>
+        </li>
+      </ul>
+</div>
+</div>
+</div>
