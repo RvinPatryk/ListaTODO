@@ -1,0 +1,9 @@
+<form method="POST" action="../backend/connect.php" class="form center" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <p class="formOpis"> Logowanie</p>
+    <p class="formWiadomosc">{{wiadomosc}}</p>
+    <input class="formInput" name="username" type="nazwa" formControlName="nazwa" placeholder="Login" />
+    <input class="formInput" name="password" type="password" formControlName="haslo" placeholder="Hasło" />
+    <button class="formButton" name="submit" type="submit">Loguj</button>
+    <hr>  
+    <a class="formLink" [routerLink]="['/rejestracja']">Zarejestruj się</a>
+</form>
