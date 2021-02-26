@@ -1,0 +1,12 @@
+<form class="form center" [formGroup]="rejestracjaForm" (ngSubmit)="onSubmit()">
+    <p class="formOpis"> Rejestracja</p>
+    <p class="formWiadomosc">{{wiadomosc}}</p>
+    <input class="formInput" type="nazwa" formControlName="nazwa" placeholder="Login" />
+    <input class="formInput" type="email" formControlName="email" placeholder="E-mail" />
+    <input class="formInput" type="password" formControlName="haslo" placeholder="Hasło" />
+    <input class="formInput" type="text" formControlName="imie" placeholder="Imię" />
+    <input class="formInput" type="text" formControlName="nazwisko" placeholder="Nazwisko" />
+    <label class="formLabel" for="urodziny">Data urodzenia</label>
+    <input class="formInput" type="date" formControlName="urodziny" placeholder="Urodziny" />
+    <button class="formButton" type="submit">Zarejestruj</button>
+</form>
