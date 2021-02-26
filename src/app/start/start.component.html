@@ -1,0 +1,7 @@
+<div class="start center">
+    <h3>
+        Witaj {{aktualny.imie | nameTransform}} {{aktualny?.nazwisko | nameTransform}}, Twój wiek to {{aktualny?.wiek()}} lat.
+    </h3>
+    <button class="wylogujLink" (click)="lista()">Przejdź do listy</button>
+    <button class="wylogujLink" (click)="wyloguj()">Wyloguj</button>
+</div>

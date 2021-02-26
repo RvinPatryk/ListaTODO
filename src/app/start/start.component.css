@@ -1,0 +1,18 @@
+.start {    
+    margin-top:100px;
+    width: 250px;  
+    height: 150px;
+    border: 1px gray solid;
+    padding: 10px;        
+}
+.wylogujLink {
+    margin:auto;
+    text-decoration: none;
+    height: 30px;  
+    width: 250px; 
+}
+.wylogujLink:hover {
+    color:red;
+    cursor: pointer;
+    margin: auto;
+}
