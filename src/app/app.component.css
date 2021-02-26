@@ -1,61 +1,62 @@
 html{
-  min-height: 100%;
-}
-
-#content {
-  position: relative;
-  min-height: 88.5vh;
-}
-
-.container{
-    display: flex; justify-content: space-around;
-}
-
-.nav {
-    background: gainsboro;
+    min-height: 100%;
   }
-   
-  .nav ul {
-    background-color: grey;
-    text-align: center;
-    padding: 0;
-    margin: 0;
+  
+  #content {
+    position: relative;
+    min-height: 88.5vh;
   }
-   
-  .nav a {
-    text-decoration: none;
-    color: #fff;
-    display: block;
-    transition: .3s background-color;
+  
+  .container{
+      display: flex; justify-content: space-around;
   }
-   
-  .nav a:hover {
-    background-color: #005a5a;
-  }
-   
-  .nav a.active {
-    background-color: #fff;
-    color: #444;
-    cursor: default;
-  }
-
-  .nav a.active:hover {
-    background-color: #00d1d1;
-  }
-   
-    .nav li {
-      width: 120px;
-      border-bottom: none;
-      height: 50px;
-      line-height: 50px;
-      font-size: 1.4em;
+  
+  .nav {
+      background: #444;
     }
-   
-    .nav li {
-      display: inline-block;
-      margin-right: -4px;
+     
+    .nav ul {
+      background-color: grey;
+      text-align: center;
+      padding: 0;
+      margin: 0;
     }
-
+     
+    .nav a {
+      text-decoration: none;
+      text-align: center;
+      color: #fff;
+      display: block;
+      transition: .3s background-color;
+    }
+     
+    .nav a:hover {
+      background-color: #005a5a;
+    }
+     
+    .nav a.active {
+      background-color: #fff;
+      color: #444;
+      cursor: default;
+    }
+  
+    .nav a.active:hover {
+      background-color: #00d1d1;
+    }
+     
+      .nav li {
+        width: 120px;
+        border-bottom: none;
+        height: 50px;
+        line-height: 50px;
+        font-size: 1.4em;
+      }
+     
+      .nav li {
+        display: inline-block;
+        margin-right: -4px;
+      }
+  
 h1 {
     font-family: 'Oswald', sans-serif;
     font-weight: bold;
@@ -69,13 +70,13 @@ h1 {
 footer {
   position: absolute;
   bottom: 0;
-  width: 100%;
+  width: 98.7%;
   height: 35px; 
 }
 
 .footer-copyright 
 {	background: #222;
-  padding: 8px;
+  padding: 6.7px;
   min-width: 100%; 
   bottom: 0;
 }
@@ -86,3 +87,31 @@ footer {
   text-align: center;
 }
 
+.container{
+    display: flex; justify-content: space-around;
+}
+html{
+    min-height: 100%;
+  }
+  
+  #content {
+    position: relative;
+    min-height: 88.5vh;
+  }
+
+  img {
+    max-width: 38px;
+    float: right; 
+    position: center;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+  
+  #page-container {
+    position: relative;
+    min-height: 100vh;
+  }
+
+  #content-wrap {
+    padding-bottom: 35px;
+  }

@@ -1,4 +1,64 @@
-/* You can add global styles to this file, and also import other style files */
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+.form {    
+    margin-top:100px;
+    width: 220px;  
+    height: 390px;
+    border: 1px gray solid;
+    padding: 10px;    
+}
+.formInput {
+    margin: 5px;
+    height: 30px;
+    width: 200px;
+}
+.formButton {
+    margin: 9px;
+    height: 30px;
+    width: 200px;
+}
+.formLink {    
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    float: right;
+}
+.formWiadomosc {
+    color: red;
+    text-align: center;
+}
+.formOpis{
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+#content-wrap {
+    padding-bottom: 35px;
+  }
+  
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 98.7%;
+    height: 35px; 
+  }
+  
+  .footer-copyright 
+  {	background: #222;
+    padding: 6.7px;
+    min-width: 100%; 
+    bottom: 0;
+  }
+  
+  .footer-copyright p {	
+    color: #969696;	
+    margin: 2px;
+    text-align: center;
+  }
+  #content {
+    position: relative;
+    min-height: 88.5vh;
+  }

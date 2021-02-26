@@ -1,37 +1,41 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { MatTooltipModule } from '@angular/material/tooltip'
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AddTaskComponent } from './add-task/add-task.component';
-import { TodoTaskComponent } from './todo-task/todo-task.component';
-import { DoneTaskComponent } from './done-task/done-task.component';
-import { TasksService } from './services/tasks.service';
-import { CheckedDirective } from './shared/checked.directive';
+import { StartComponent } from './start/start.component';
+import { LoginComponent } from './login/login.component';
+import { RejestracjaComponent } from './rejestracja/rejestracja.component';
+import { SerwisModule } from './serwis/serwis.module';
+import { TaskservicesModule } from './serwis/taskservices.module';
+import { NameTransformPipe } from './shared/name-transform.pipe';
+import { ListaComponent } from './lista/lista.component';
+import { TaskTransformPipe } from './shared/task-transfrom.pipe';
 import { DateDirective } from './shared/date.directive';
-import { TaskTransformPipe } from './shared/task-transform.pipe';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpService } from './serwis/http.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddTaskComponent,
-    TodoTaskComponent,
-    DoneTaskComponent,
-    CheckedDirective,
-    DateDirective,
+    StartComponent,
+    LoginComponent,
+    RejestracjaComponent,
+    NameTransformPipe,
+    ListaComponent,
     TaskTransformPipe,
+    DateDirective,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     FormsModule,
-    BrowserAnimationsModule,
-    MatTooltipModule
+    HttpClientModule
   ],
-  providers: [TasksService],
+  providers: [SerwisModule, TaskservicesModule, HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
